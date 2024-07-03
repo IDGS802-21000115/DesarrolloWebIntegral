@@ -1,0 +1,33 @@
+<div class="colList">
+  <h3>Empleados:</h3>
+  <table class="table table-striped">
+    <thead class="table-ligth">
+      <tr>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Telefono</th>
+        <th>Fecha Nacimiento</th>
+        <th>Sexo</th>
+        <th>Eliminar</th>
+      </tr>
+    </thead>
+    @for (empleado of empleados; track $index) {
+    <tr>
+      <td>{{ empleado.nombre }}</td>
+      <td>{{ empleado.correo }}</td>
+      <td>{{ empleado.telefono }}</td>
+      <td>{{ empleado.fechaNacimiento }}</td>
+      <td>{{ empleado.sexo }}</td>
+      <td>
+        <button
+          type="button"
+          class="btn btn-danger"
+          (click)="eliminar(empleado)"
+        >
+          Eliminar
+        </button>
+      </td>
+    </tr>
+    }
+  </table>
+</div>

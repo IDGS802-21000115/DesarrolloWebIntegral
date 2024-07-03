@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+app-agregar-empleados,
+app-listado-empleados {
+  flex: 1;
+  margin: 0 10px;
+}
